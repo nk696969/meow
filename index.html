@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coded by nk</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        .rainbow-text {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 12px;
+            color: red; /* 初期色を赤に設定 */
+            display: flex;
+        }
+        .rainbow-text span {
+            animation: textColorChange 10s infinite linear;
+        }
+        @keyframes textColorChange {
+            0% { color: hsl(0, 100%, 50%); }
+            16% { color: hsl(60, 100%, 50%); }
+            33% { color: hsl(120, 100%, 50%); }
+            50% { color: hsl(180, 100%, 50%); }
+            66% { color: hsl(240, 100%, 50%); }
+            83% { color: hsl(300, 100%, 50%); }
+            100% { color: hsl(360, 100%, 50%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="rainbow-text">
+        <span style="animation-delay: 0s;">T</span>
+        <span style="animation-delay: 0.1s;">o</span>
+        <span style="animation-delay: 0.2s;">r</span>
+        <span style="animation-delay: 0.3s;">u</span>
+        <span style="animation-delay: 0.4s;">s</span>
+        <span style="animation-delay: 0.5s;">‎-</span>
+        <span style="animation-delay: 0.6s;">k</span>
+        <span style="animation-delay: 0.7s;">n</span>
+        <span style="animation-delay: 0.8s;">‎o</span>
+        <span style="animation-delay: 0.9s;">t</span>
+        <span style="animation-delay: 1.0s;">!</span>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
