@@ -6,7 +6,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 // トーラスジオメトリとマテリアルの作成
-const geometry = new THREE.TorusGeometry(5, 1.5, 16, 100); // サイズを小さくしました
+const geometry = new THREE.TorusGeometry(5, 1.5, 16, 100);
 const material = new THREE.PointsMaterial({ size: 0.1, vertexColors: true });
 const points = new THREE.Points(geometry, material);
 scene.add(points);
@@ -28,11 +28,11 @@ function animate() {
     requestAnimationFrame(animate);
 
     // トーラスの回転
-    points.rotation.x += 0.01; // 回転速度を少し落としました
-    points.rotation.y += 0.01; // 回転速度を少し落としました
+    points.rotation.x += 0.01;
+    points.rotation.y += 0.01;
 
     // 色相を徐々に変化させる速度を落とす
-    const time = Date.now() * 0.0005; // 速度を少し落としました
+    const time = Date.now() * 0.0005;
     const h = (time % 1);
     for (let i = 0; i < geometry.attributes.color.count; i++) {
         color.setHSL((h + i / geometry.attributes.position.count) % 1, 1, 0.5); // 波のように変化
